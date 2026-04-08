@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <title>💌 ¡Estás invitado a Mis XV Años: Isabel Kathalina!</title>
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="💌 ¡Da clic para ver tu invitación">
-    <meta property="og:description" content="Cordialmente invitado">
     
-    <meta property="og:image" content="https://cftr28.github.io/invitacion15Isabel/fondos.png">
-    <meta property="og:image:secure_url" content="https://cftr28.github.io/invitacion15Isabel/fondos.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="300">
-    <meta property="og:image:height" content="300">
+    <meta name="description" content="Cordialmente invitado a celebrar mis 15 años.">
+    <meta property="og:type" content="website">
     <meta property="og:url" content="https://cftr28.github.io/invitacion15Isabel/">
-
+    <meta property="og:title" content="💌 ¡Da clic para ver tu invitación!">
+    <meta property="og:description" content="Acompáñame en este día tan especial. Isabel Kathalina.">
+    
+    <meta property="og:image" content="https://cftr28.github.io/invitacion15Isabel/preview.jpg">
+    <meta property="og:image:secure_url" content="https://cftr28.github.io/invitacion15Isabel/preview.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -66,7 +67,7 @@
         .placa-oro {
             width: 280px;
             padding: 30px 20px;
-            background: linear-gradient(135deg, #d4af37 0%, #f9e18e 50%, #b59410 100%);
+            background: var(--oro-metalico);
             border: 2px solid #fff;
             box-shadow: 0 15px 35px rgba(0,0,0,0.25);
             border-radius: 15px;
@@ -82,7 +83,7 @@
         #portada-wrapper.hidden { opacity: 0; visibility: hidden; }
         #main-content { display: none; position: relative; z-index: 1; }
 
-        /* HERO - AJUSTE DE COLORES Y TAMAÑO MEDIO */
+        /* HERO */
         .hero {
             height: 100vh;
             display: flex;
@@ -104,7 +105,7 @@
             font-size: clamp(55px, 15vw, 100px); 
             opacity: 0;
             color: var(--oro-deep);
-            filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.3));
+            filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.1));
             margin-bottom: 5px;
             line-height: 1.2;
         }
@@ -116,7 +117,6 @@
             background: var(--oro-metalico);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            filter: drop-shadow(2px 2px 1px rgba(92, 75, 26, 0.5));
             margin-top: -10px;
             line-height: 1.1;
         }
@@ -167,9 +167,11 @@
             font-weight: 600;
             margin-top: 10px;
             text-transform: uppercase;
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             letter-spacing: 1px;
             box-shadow: 0 4px 15px rgba(181, 148, 16, 0.3);
+            border: none;
+            cursor: pointer;
         }
         
         @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
@@ -183,7 +185,7 @@
     <div id="portada-wrapper" onclick="abrirInvitacion()">
         <div class="placa-oro">
             <h2 style="font-family: 'Great Vibes', cursive; font-size: 2.2rem;">Isabel Kathalina</h2>
-            <p style="font-size: 0.65rem; letter-spacing: 2px; margin-top: 10px; font-weight: bold;">TOCA PARA ABRIR</p>
+            <p style="font-size: 0.7rem; letter-spacing: 2px; margin-top: 10px; font-weight: bold; color: white;">TOCA PARA ABRIR</p>
         </div>
     </div>
 
@@ -239,47 +241,52 @@
                 <h3 style="margin-bottom: 10px; font-size: 1.1rem; color: var(--oro-deep);">Misa de Acción de Gracias</h3>
                 <p><i class="fa-solid fa-location-dot"></i> <strong>Iglesia San Cayetano</strong></p>
                 <p style="font-size: 0.85rem; margin-top: 5px;">Sector San Cayetano Alto, Loja</p>
-                <a href="http://googleusercontent.com/maps.google.com/misa" target="_blank" class="btn">Abrir GPS Misa</a>
+                <a href="https://maps.app.goo.gl/vX9YJ3pP1M9U2uB69" target="_blank" class="btn">Abrir GPS Misa</a>
             </div>
 
             <div class="card-info">
                 <h3 style="margin-bottom: 10px; font-size: 1.1rem; color: var(--oro-deep);">Recepción</h3>
                 <p><i class="fa-solid fa-house-chimney"></i> <strong>Local "El Detalle"</strong></p>
                 <p style="font-size: 0.85rem; margin-top: 5px;">San Cayetano Alto, Calles José Coronel y Lauro Ludeña</p>
-                <a href="http://googleusercontent.com/maps.google.com/recepcion" target="_blank" class="btn">Abrir GPS Recepción</a>
+                <a href="https://maps.app.goo.gl/Yp4J5N8Y4V8S7T2G7" target="_blank" class="btn">Abrir GPS Recepción</a>
             </div>
         </section>
 
         <section class="section">
             <h2 class="titulo-section">Lluvia de Sobres</h2>
             <div class="card-info" style="text-align: left;">
-                <p><i class="fa-solid fa-building-columns"></i> <strong>Cta. Ahorros Banco de Loja</strong></p>
-                <p><i class="fa-solid fa-user"></i> <strong>Kathalina Sanchez</strong></p>
-                <p><i class="fa-solid fa-piggy-bank"></i> <strong>Cta:</strong> 2905756512</p>
-                <p><i class="fa-solid fa-id-card"></i> <strong>C.I.:</strong> 1150700308</p>
+                <p style="margin-bottom: 8px;"><i class="fa-solid fa-building-columns" style="color: var(--oro-deep);"></i> <strong>Banco de Loja</strong></p>
+                <p style="margin-bottom: 8px;"><i class="fa-solid fa-user" style="color: var(--oro-deep);"></i> <strong>Kathalina Sanchez</strong></p>
+                <p style="margin-bottom: 8px;"><i class="fa-solid fa-piggy-bank" style="color: var(--oro-deep);"></i> <strong>Cta Ahorros:</strong> 2905756512</p>
+                <p><i class="fa-solid fa-id-card" style="color: var(--oro-deep);"></i> <strong>C.I.:</strong> 1150700308</p>
             </div>
         </section>
 
         <section class="section" style="padding-bottom: 100px;">
-            <a href="https://wa.me/593988456721?text=Hola!%20Confirmo%20asistencia%20a%20tus%20XV%20Isabel" class="btn" style="padding: 18px 40px; font-size: 0.9rem;">Confirmar Asistencia</a>
+            <a href="https://wa.me/593988456721?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20tus%20XV%20Isabel" class="btn" style="padding: 18px 40px; font-size: 0.9rem;">Confirmar Asistencia</a>
         </section>
     </div>
 
     <script>
         function abrirInvitacion() {
+            // Reproducir música
             const audio = document.getElementById('miMusica');
-            audio.play().catch(e => console.log("Interacción necesaria"));
+            audio.play().catch(e => console.log("Se requiere interacción para audio"));
             
+            // Cambiar vistas
             document.getElementById('portada-wrapper').classList.add('hidden');
             document.getElementById('main-content').style.display = 'block';
 
+            // Animaciones
             setTimeout(() => {
                 document.getElementById('userName').classList.add('animate-name');
                 document.getElementById('userSub').classList.add('animate-sub');
-                document.getElementById('indicador').style.opacity = '1';
-                document.getElementById('indicador').style.transition = 'opacity 1s';
+                const indicador = document.getElementById('indicador');
+                indicador.style.opacity = '1';
+                indicador.style.transition = 'opacity 1s';
             }, 300);
 
+            // Confetti
             confetti({
                 particleCount: 150,
                 spread: 70,
