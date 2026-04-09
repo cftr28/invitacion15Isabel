@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <title>💌 ¡Estás invitado a Mis XV Años: Isabel Kathalina!</title>
-    
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://cftr28.github.io/invitacion15Isabel/">
-    <meta property="og:title" content="💌 ¡Estás invitado a Mis XV Años!">
-    <meta property="og:description" content="Acompáñame a celebrar este día tan especial. Isabel Kathalina.">
+    <meta property="og:title" content="💌 ¡Estás invitado a Mis XV Años: Isabel Kathalina!">
+    <meta property="og:description" content="Acompáñame a celebrar este día tan especial. 18.04.2026">
+    <meta property="og:url" content="https://cftr28.github.io/invitacion15Isabelpases/">
     
-    <meta property="og:image" content="https://cftr28.github.io/invitacion15Isabel/preview.jpg?v=2">
-    <meta property="og:image:secure_url" content="https://cftr28.github.io/invitacion15Isabel/preview.jpg?v=2">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:image" content="https://cftr28.github.io/invitacion15Isabelpases/preview.png">
+    <meta property="og:image:secure_url" content="https://cftr28.github.io/invitacion15Isabelpases/preview.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
 
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -23,11 +22,11 @@
 
     <style>
         :root {
-            --oro-deep: #b59410;
-            --oro-brillante: #f9e18e;
+            --oro-oscuro: #8a6d0a; 
+            --oro-vivo: #c29b00e2; 
             --oro-metalico: linear-gradient(135deg, #d4af37 0%, #f9e18e 50%, #b59410 100%);
-            --text-dark: #5c4b1a;
-            --white-glass: rgba(255, 255, 255, 0.92);
+            --text-dark: #443710; 
+            --white-glass: rgba(255, 255, 255, 0.95);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -64,19 +63,15 @@
         }
 
         .placa-oro {
-            width: 280px;
-            padding: 30px 20px;
+            width: 200px;
+            padding: 15px 10px;
             background: var(--oro-metalico);
             border: 2px solid #fff;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
             border-radius: 15px;
             text-align: center;
             animation: flotar 3s infinite ease-in-out;
-        }
-
-        @keyframes flotar {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+            margin-top: -100px;
         }
 
         #portada-wrapper.hidden { opacity: 0; visibility: hidden; }
@@ -87,207 +82,230 @@
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start; 
+            padding-top: 20vh; 
             align-items: center;
             text-align: center;
-            position: relative;
         }
 
-        .nombre-container {
-            transform: translateY(-40px); 
-            width: 90%;
-            max-width: 600px;
+        .fecha-top {
+            font-weight: 600;
+            letter-spacing: 5px;
+            font-size: 0.85rem;
+            margin-bottom: 25px;
+            color: #ffffff; 
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
         }
 
         .nombre-container h1 {
             font-family: 'Great Vibes', cursive;
-            font-size: clamp(55px, 15vw, 100px); 
-            opacity: 0;
-            color: var(--oro-deep);
-            filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.1));
-            margin-bottom: 5px;
-            line-height: 1.2;
+            font-size: clamp(45px, 12vw, 70px); 
+            color: var(--oro-oscuro); 
+            line-height: 1.1;
         }
 
         .nombre-container p {
             font-family: 'Great Vibes', cursive;
-            font-size: clamp(50px, 13vw, 90px); 
-            opacity: 0;
-            background: var(--oro-metalico);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-top: -10px;
-            line-height: 1.1;
+            font-size: clamp(55px, 16vw, 90px); 
+            color: var(--oro-vivo); 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+            line-height: 0.9;
+            margin-top: 5px;
         }
 
-        .animate-name { animation: entradaNombre 1s forwards ease-out; }
-        .animate-sub { animation: entrada 1s forwards ease-out 0.4s; }
+        #scroller-indicator {
+            position: fixed;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            color: #ffffff; 
+            text-shadow: 0px 0px 8px rgba(0,0,0,0.5); 
+            z-index: 1000;
+            animation: bounce 2s infinite ease-in-out;
+            transition: opacity 0.5s ease;
+        }
 
-        @keyframes entradaNombre { to { opacity: 1; transform: translateY(-10px); } }
-        @keyframes entrada { to { opacity: 1; transform: translateY(0); } }
-
-        /* SECCIONES */
         .section { padding: 40px 20px; text-align: center; }
-        .titulo-section { font-family: 'Great Vibes', cursive; font-size: 3rem; color: var(--oro-deep); margin-bottom: 20px; }
+        .titulo-section { font-family: 'Great Vibes', cursive; font-size: 3rem; color: var(--oro-oscuro); margin-bottom: 25px; }
+        
+        .frase-invitacion {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.2rem;
+            color: var(--oro-oscuro);
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
 
         .card-info {
-            max-width: 400px;
+            max-width: 360px;
             margin: 0 auto 20px;
             background: var(--white-glass);
-            padding: 25px;
+            padding: 30px 25px;
             border-radius: 20px;
-            border: 1px solid rgba(181, 148, 16, 0.2);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            backdrop-filter: blur(8px);
+            border: 1px solid rgba(138, 109, 10, 0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
-        .itinerary-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            text-align: left;
+        .timeline { display: flex; flex-direction: column; gap: 20px; max-width: 320px; margin: 0 auto; }
+        .timeline-item { display: flex; align-items: center; gap: 15px; text-align: left; }
+        .timeline-icon {
+            width: 50px; height: 50px; background: var(--oro-metalico); border-radius: 50%;
+            display: flex; justify-content: center; align-items: center; color: white;
+            font-size: 1.2rem; flex-shrink: 0; box-shadow: 0 4px 10px rgba(138, 109, 10, 0.3);
         }
-        .itinerary-item i {
-            font-size: 1.5rem;
-            width: 40px;
-            margin-right: 15px;
-            color: var(--oro-deep);
-        }
-        .itinerary-text b { display: block; font-size: 1rem; }
-        .itinerary-text span { font-size: 0.85rem; color: #777; }
+        .timeline-text strong { display: block; font-size: 0.9rem; color: var(--oro-oscuro); }
+        .timeline-text span { font-size: 1.1rem; font-weight: 500; }
 
         .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background: linear-gradient(135deg, var(--oro-deep), #d4af37);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            margin-top: 10px;
-            text-transform: uppercase;
-            font-size: 0.75rem;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 15px rgba(181, 148, 16, 0.3);
-            border: none;
-            cursor: pointer;
+            display: inline-block; padding: 14px 30px; background: var(--oro-metalico);
+            color: white; text-decoration: none; border-radius: 50px; font-weight: 600;
+            text-transform: uppercase; font-size: 0.8rem; border: none; margin-top: 10px;
         }
-        
-        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+        #timer-invitacion { margin-bottom: 20px; } 
+        .countdown-container { display: flex; justify-content: center; gap: 8px; }
+        .time-box { background: var(--oro-metalico); color: white; min-width: 60px; padding: 10px 5px; border-radius: 12px; }
+        .time-box span { display: block; font-size: 1.2rem; font-weight: 600; }
+        .time-box small { font-size: 0.6rem; text-transform: uppercase; }
+
+        @keyframes bounce { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, -10px); } }
+        @keyframes flotar { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
     </style>
 </head>
 <body>
 
     <div class="background-fixed"></div>
-    <audio id="miMusica" src="musica.mp3" preload="auto" loop></audio>
+    <audio id="miMusica" loop><source src="musica.mp3" type="audio/mpeg"></audio>
 
     <div id="portada-wrapper" onclick="abrirInvitacion()">
         <div class="placa-oro">
             <h2 style="font-family: 'Great Vibes', cursive; font-size: 2.2rem;">Isabel Kathalina</h2>
-            <p style="font-size: 0.7rem; letter-spacing: 2px; margin-top: 10px; font-weight: bold; color: white;">TOCA PARA ABRIR</p>
+            <p style="font-size: 0.65rem; letter-spacing: 2px; margin-top: 10px; font-weight: bold; color: white;">TOCA PARA ABRIR</p>
         </div>
     </div>
 
+    <div id="music-control" onclick="toggleMusica()" style="position:fixed; bottom:20px; right:20px; width:45px; height:45px; background:var(--oro-metalico); border-radius:50%; display:none; justify-content:center; align-items:center; color:white; z-index:1001; cursor:pointer;">
+        <i id="music-icon" class="fa-solid fa-pause"></i>
+    </div>
+
+    <div id="scroller-indicator"><i class="fa-solid fa-chevron-down"></i><span>desliza</span></div>
+
     <div id="main-content">
-        <section class="hero">
+        <section class="hero" id="hero-section">
+            <div class="fecha-top">18 . ABRIL . 2026</div>
             <div class="nombre-container">
-                <h1 id="userName">Isabel Kathalina</h1>
-                <p id="userSub">Mis 15 Años</p>
+                <h1>Isabel Kathalina</h1>
+                <p>Mis 15 Años</p>
             </div>
-            <div id="indicador" style="position: absolute; bottom: 30px; color: var(--oro-deep); opacity: 0;">
-                <i class="fa-solid fa-chevron-down" style="animation: bounce 1.5s infinite;"></i>
+        </section>
+
+        <section class="section">
+            <p class="frase-invitacion">Hoy comienza una nueva etapa...</p>
+            <p style="font-size: 1.1rem; max-width: 300px; margin: 0 auto; line-height: 1.6;">
+                Te invito a celebrar mis <strong>XV Años</strong>, una noche mágica que deseo compartir contigo.
+            </p>
+        </section>
+
+        <section class="section">
+            <div id="timer-invitacion">
+                <div class="countdown-container">
+                    <div class="time-box"><span id="days">00</span><small>Días</small></div>
+                    <div class="time-box"><span id="hours">00</span><small>Hrs</small></div>
+                    <div class="time-box"><span id="mins">00</span><small>Min</small></div>
+                    <div class="time-box"><span id="secs">00</span><small>Seg</small></div>
+                </div>
             </div>
         </section>
 
         <section class="section">
             <h2 class="titulo-section">Itinerario</h2>
             <div class="card-info">
-                <div class="itinerary-item">
-                    <i class="fa-solid fa-church"></i>
-                    <div class="itinerary-text">
-                        <b>Misa de Acción de Gracias</b>
-                        <span>18:30 Horas</span>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="fa-solid fa-church"></i></div>
+                        <div class="timeline-text"><strong>18:00 HRS</strong><span>Ceremonia Religiosa</span></div>
                     </div>
-                </div>
-                <div class="itinerary-item">
-                    <i class="fa-solid fa-champagne-glasses"></i>
-                    <div class="itinerary-text">
-                        <b>Recepción y Brindis</b>
-                        <span>20:00 Horas</span>
-                    </div>
-                </div>
-                <div class="itinerary-item">
-                    <i class="fa-solid fa-cake-candles"></i>
-                    <div class="itinerary-text">
-                        <b>Cena y Protocolo</b>
-                        <span>21:00 Horas</span>
-                    </div>
-                </div>
-                <div class="itinerary-item">
-                    <i class="fa-solid fa-music"></i>
-                    <div class="itinerary-text">
-                        <b>¡A Celebrar!</b>
-                        <span>22:00 Horas</span>
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="fa-solid fa-glass-cheers"></i></div>
+                        <div class="timeline-text"><strong>20:00 HRS</strong><span>Recepción y Brindis</span></div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="section">
-            <h2 class="titulo-section">¿Cómo llegar?</h2>
+            <h2 class="titulo-section">Ubicación</h2>
             <div class="card-info">
-                <h3 style="margin-bottom: 10px; font-size: 1.1rem; color: var(--oro-deep);">Misa de Acción de Gracias</h3>
-                <p><i class="fa-solid fa-location-dot"></i> <strong>Iglesia San Cayetano</strong></p>
-                <p style="font-size: 0.85rem; margin-top: 5px;">Sector San Cayetano Alto, Loja</p>
-                <a href="https://maps.app.goo.gl/9yGgL8S7r2W8" target="_blank" class="btn">Abrir GPS Misa</a>
+                <i class="fa-solid fa-church" style="color: var(--oro-oscuro); font-size: 1.5rem; margin-bottom: 10px;"></i>
+                <p><strong>Misa de Acción de Gracias</strong></p>
+                <p style="font-size: 0.85rem; margin-bottom: 10px;">Catedral de Loja</p>
+                <a href="https://maps.app.goo.gl/uXv7V2v1Xp7R6p8S9" target="_blank" class="btn">Mapa Iglesia</a>
             </div>
-
             <div class="card-info">
-                <h3 style="margin-bottom: 10px; font-size: 1.1rem; color: var(--oro-deep);">Recepción</h3>
-                <p><i class="fa-solid fa-house-chimney"></i> <strong>Local "El Detalle"</strong></p>
-                <p style="font-size: 0.85rem; margin-top: 5px;">San Cayetano Alto, Calles José Coronel y Lauro Ludeña</p>
-                <a href="https://maps.app.goo.gl/9yGgL8S7r2W8" target="_blank" class="btn">Abrir GPS Recepción</a>
+                <i class="fa-solid fa-glass-cheers" style="color: var(--oro-oscuro); font-size: 1.5rem; margin-bottom: 10px;"></i>
+                <p><strong>Recepción</strong></p>
+                <p style="font-size: 0.85rem; margin-bottom: 10px;">Local "El Detalle" - San Cayetano Alto</p>
+                <a href="https://maps.app.goo.gl/uXv7V2v1Xp7R6p8S9" target="_blank" class="btn">Mapa Recepción</a>
             </div>
         </section>
 
         <section class="section">
             <h2 class="titulo-section">Lluvia de Sobres</h2>
             <div class="card-info" style="text-align: left;">
-                <p style="margin-bottom: 8px;"><i class="fa-solid fa-building-columns" style="color: var(--oro-deep);"></i> <strong>Banco de Loja</strong></p>
-                <p style="margin-bottom: 8px;"><i class="fa-solid fa-user" style="color: var(--oro-deep);"></i> <strong>Kathalina Sanchez</strong></p>
-                <p style="margin-bottom: 8px;"><i class="fa-solid fa-piggy-bank" style="color: var(--oro-deep);"></i> <strong>Cta Ahorros:</strong> 2905756512</p>
-                <p><i class="fa-solid fa-id-card" style="color: var(--oro-deep);"></i> <strong>C.I.:</strong> 1150700308</p>
+                <p style="margin-bottom: 12px;"><i class="fa-solid fa-building-columns" style="color: var(--oro-oscuro); margin-right: 8px;"></i> <strong>Banco de Loja</strong></p>
+                <p style="margin-bottom: 12px;"><i class="fa-solid fa-user" style="color: var(--oro-oscuro); margin-right: 8px;"></i> <strong>Kathalina Sanchez</strong></p>
+                <p style="margin-bottom: 12px;"><i class="fa-solid fa-piggy-bank" style="color: var(--oro-oscuro); margin-right: 8px;"></i> <strong>Cta Ahorros:</strong> 2905756512</p>
+                <p><i class="fa-solid fa-id-card" style="color: var(--oro-oscuro); margin-right: 8px;"></i> <strong>C.I.:</strong> 1150700308</p>
             </div>
         </section>
 
-        <section class="section" style="padding-bottom: 100px;">
-            <a href="https://wa.me/593988456721?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20tus%20XV%20Isabel" class="btn" style="padding: 18px 40px; font-size: 0.9rem;">Confirmar Asistencia</a>
+        <section class="section" style="padding-bottom: 140px;">
+            <a href="https://wa.me/593988456721?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20tus%20XV%20Isabel" class="btn">Confirmar Asistencia</a>
         </section>
     </div>
 
     <script>
+        const audio = document.getElementById('miMusica');
+        const musicIcon = document.getElementById('music-icon');
+        const scroller = document.getElementById('scroller-indicator');
+
         function abrirInvitacion() {
-            const audio = document.getElementById('miMusica');
-            audio.play().catch(e => console.log("Audio bloqueado hasta interacción"));
-            
+            audio.play().catch(e => console.log("Audio bloqueado"));
             document.getElementById('portada-wrapper').classList.add('hidden');
             document.getElementById('main-content').style.display = 'block';
-
-            setTimeout(() => {
-                document.getElementById('userName').classList.add('animate-name');
-                document.getElementById('userSub').classList.add('animate-sub');
-                const indicador = document.getElementById('indicador');
-                indicador.style.opacity = '1';
-                indicador.style.transition = 'opacity 1s';
-            }, 300);
-
-            confetti({
-                particleCount: 150,
-                spread: 70,
-                origin: { y: 0.6 },
-                colors: ['#FFD700', '#D4AF37', '#ffffff']
-            });
+            document.getElementById('music-control').style.display = 'flex';
+            scroller.style.display = 'flex';
+            confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 }, colors: ['#FFD700', '#D4AF37', '#ffffff'] });
         }
+
+        function toggleMusica() {
+            if (audio.paused) { audio.play(); musicIcon.classList.replace('fa-play', 'fa-pause'); } 
+            else { audio.pause(); musicIcon.classList.replace('fa-pause', 'fa-play'); }
+        }
+
+        window.addEventListener('scroll', function() {
+            let heroHeight = document.getElementById('hero-section').offsetHeight;
+            if (window.scrollY > (heroHeight * 0.3)) {
+                scroller.style.opacity = '0';
+                setTimeout(() => { scroller.style.display = 'none'; }, 500);
+            } else {
+                scroller.style.display = 'flex';
+                scroller.style.opacity = '1';
+            }
+        });
+
+        const countdownDate = new Date("April 18, 2026 18:00:00").getTime();
+        setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+            document.getElementById("days").innerHTML = Math.floor(distance / (1000 * 60 * 60 * 24));
+            document.getElementById("hours").innerHTML = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById("mins").innerHTML = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById("secs").innerHTML = Math.floor((distance % (1000 * 60)) / 1000);
+        }, 1000);
     </script>
 </body>
 </html>
